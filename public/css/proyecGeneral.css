@@ -1,0 +1,90 @@
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #96e4eb;
+}
+
+h2 {
+  color: #333;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+#title-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#title-container h3 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown {
+  margin-left: auto;
+  position: relative;
+  right: 50px; /* Ajusta este valor para mover el menú más a la derecha */
+}
+
+/* Carrusel */
+.carousel {
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.btn-block {
+  margin-bottom: 60px; /* Separación entre botones */
+}
+
+/* Pie de página */
+.footer {
+  background-color: #96e4eb; /* Cambio de color */
+  padding: 20px 0;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  /* Estilos para pantallas pequeñas */
+}
+#title-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#title-container h3 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+#dropdownMenuButton {
+  margin-right: auto;
+}
+#title-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#title-container h3 {
+  margin: 0;
+}
+
+.dropdown {
+  margin-left: auto;
+}
