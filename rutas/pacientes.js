@@ -7,12 +7,12 @@ const rcPacientes = {};
 rcPacientes.GETregitrar = (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'html', 'registroNuevPacient.html'))};
 
-rcPacientes.POSTcargar = (res, req) => {
+rcPacientes.POSTcargar = (req, res) => {
     console.log(req.body);
     const { Nombre, apellido, DNI, genero, obraSocial, telefono, correo, fechaNacimiento, direccion } = req.body;
 
     // Insertar los datos en la base de datos
-    const sql = 'INSERT INTO pacientes (nombre, apellido, DNI, genero, obraSocial, telefono, correo, fecha_nacimiento, direccion) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+    const sql = 'INSERT INTO paciente (nombre, apellido, DNI, genero, obraSocial, telefono, correo, fechaNacimiento, direccion) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
     db.query(sql, [Nombre, apellido, DNI, genero, obraSocial, telefono, correo, fechaNacimiento, direccion], (err, result) => {
         if (err) {
             console.error('Error al guardar el paciente: ' + err.message);
