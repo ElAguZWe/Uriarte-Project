@@ -16,7 +16,7 @@ rcPacientes.POSTcargar = (req, res) => {
     db.query(sql, [Nombre, apellido, DNI, genero, obraSocial, telefono, correo, fechaNacimiento, direccion], (err, result) => {
         if (err) {
             console.error('Error al guardar el paciente: ' + err.message);
-            res.sed('Error al guardar paciente.');
+            res.send('Error al guardar paciente.');
             return res.redirect('/registrarpaciente'); // Redirige a una página de error en caso de fallo
         }
         console.log('Paciente registrado correctamente en la base de datos.');
